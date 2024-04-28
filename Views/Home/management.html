@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management</title>
+   
+    <a href="index.html" class="button">Back to Index</a>
+    <style>
+        button {
+            display: block;
+            width: 10%;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.5s ease;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        
+
+            button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <h1>Warehouse Management</h1>
+
+    <!-- Warehouse Management Section 
+    <section id="warehouse-management">
+        <h2>Warehouse Management</h2>
+        <form id="warehouse-form">
+            <label for="warehouse-name">Warehouse Name:</label>
+            <input type="text" id="warehouse-name" name="warehouse-name" required>
+            <label for="warehouse-location">Location:</label>
+            <select id="warehouse-location" name="warehouse-location">
+                <option value="location1">Location 1</option>
+                <option value="location2">Location 2</option>
+                <option value="location3">Location 3</option>
+
+            
+            </select>
+            <button type="submit">Add Warehouse</button>
+        </form>
+    </section>
+
+    -->
+
+    <!-- Location Management Section -->
+    <section id="location-management">
+        <h2>Location Management</h2>
+        <ul id="location-list">
+            <li>Warehouse 1 (ID: 10201)</li>
+            <li>Warehouse 2 (ID: 02131)</li>
+            <li>Warehouse 3 (ID: 34415)</li>
+
+
+            <!-- Add more locations dynamically if needed -->
+        </ul>
+        <form id="location-form">
+            <label for="location-name">Warehouse Name:</label>
+            <input type="text" id="location-name" name="location-name" required>
+            <label for="location-warehouse">Warehouse ID:</label>
+            <input type="number" id="location-warehouse" name="location-warehouse" required>
+            <button type="submit">Add Warehouse</button>
+        </form>
+    </section>
+
+    <!-- Transfer Management Section -->
+    <section id="transfer-management">
+        <h2>Transfer Management</h2>
+        <form id="transfer-form">
+            <label for="product">Product:</label>
+            <input type="text" id="product" name="product-name" required>
+            <label for="transfer-quantity">Quantity:</label>
+            <input type="number" id="transfer-quantity" name="transfer-quantity" required>
+            <label for="transfer-from">From Warehouse:</label>
+            <select id="transfer-from" name="transfer-from">
+                <option value="warehouse1">Warehouse 1</option>
+                <option value="warehouse2">Warehouse 2</option>
+                <option value="warehouse3">Warehouse 3</option>
+                <!-- Add more options dynamically if needed -->
+            </select>
+            <label for="transfer-to">To Warehouse:</label>
+            <select id="transfer-to" name="transfer-to">
+                <option value="warehouse1">Warehouse 1</option>
+                <option value="warehouse2">Warehouse 2</option>
+                <option value="warehouse3">Warehouse 3</option>
+                <!-- Add more options dynamically if needed -->
+            </select>
+            <button type="submit">Transfer</button>
+        </form>
+    </section>
+
+    <script src="inventory.js"></script> <!-- JavaScript file for inventory management -->
+</body>
+</html>

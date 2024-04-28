@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <a href="index.html" class="button">Back to Index</a>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <h1>Order Management</h1>
+
+    <!-- Order Detail Table Section -->
+    <section id="order-detail-table">
+        <h2>Order Detail</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>Apple</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>002</td>
+                    <td>Orange</td>
+                    <td>2</td>
+
+                </tr>
+                <!-- Add more order details dynamically if needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- New Order Detail Form -->
+    <section id="new-order-detail">
+        <h2>New Order Detail</h2>
+        <form id="new-order-detail-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <label for="quantity">Product Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            <label for="warehouse">Select Warehouse:</label>
+            <select id="warehouse" name="warehouse" required>
+
+                <option value="">Select Warehouse</option>
+                <option value="warehouse1">Warehouse 1</option>
+                <option value="warehouse2">Warehouse 2</option>
+                <!-- Add more warehouse options as needed -->
+            </select>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Add Order Detail</button>
+        </form>
+    </section>
+    <script src="order.js"></script> <!-- JavaScript file for order management -->
+</body>
+</html>

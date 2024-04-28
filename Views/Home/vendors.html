@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Providers </title>
+    <a href="index.html" class="button">Back to Home Page</a>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+</style>
+
+
+
+<body>
+    <h1>Providers Management</h1>
+
+    <!-- View Vendors Section -->
+    <section id="view-providers">
+        <h2>View Provider</h2>
+        <ul id="provider-list">
+            <!-- Vendors will be dynamically populated here -->
+        </ul>
+    </section>
+
+    <!-- Add Vendor Section -->
+    <section id="add-provider">
+        <h2>Add New Provider</h2>
+        <form id="add-provider-form">
+            <label for="provider-name">Provider Name:</label>
+            <input type="text" id="provider-name" name="provider-name">
+            <button type="submit">Add Provider</button>
+        </form>
+    </section>
+
+    <!-- Edit Vendor Section -->
+    <section id="edit-provider">
+        <h2>Edit Provider</h2>
+        <form id="edit-provider-form">
+            <label for="edit-provider-name">New Provider Name:</label>
+            <input type="text" id="edit-provider-name" name="edit-provider-name">
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <!-- Delete Vendor Section -->
+    <section id="delete-provider">
+        <h2>Delete Provider</h2>
+        <select id="delete-provider-select">
+            <!-- Vendors will be dynamically populated here -->
+        </select>
+        <button id="delete-provider-button">Delete Provider</button>
+    </section>
+
+    <script src="vendors.js"></script> <!-- JavaScript file for vendor management -->
+</body>
+</html>

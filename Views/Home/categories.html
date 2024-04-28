@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories Management</title>
+</head>
+<a href="index.html" class="button">Back to Home Page</a>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+<body>
+    <h1>Categories Management</h1>
+
+    <!-- View Categories Section -->
+    <section id="view-categories">
+        <h2>View Categories</h2>
+        <ul>
+            <li>Fruits</li>
+            <li>Vegetables</li>
+            <li>Refrigerated Items</li>
+            <li>Category 4</li>
+            <li>Category 5</li>
+        </ul>
+    </section>
+
+    <!-- Add Category Section -->
+    <section id="add-category">
+        <h2>Add New Category</h2>
+        <form id="add-category-form">
+            <label for="category-name">Category Name:</label>
+            <input type="text" id="category-name" name="category-name">
+            <button type="submit">Add Category</button>
+        </form>
+    </section>
+
+    <!-- Edit Category Section -->
+    <section id="edit-category">
+        <h2>Edit Category</h2>
+        <form id="edit-category-form">
+            <label for="edit-category-name">New Category Name:</label>
+            <input type="text" id="edit-category-name" name="edit-category-name">
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <!-- Delete Category Section -->
+    <section id="delete-category">
+        <h2>Delete Category</h2>
+        <select id="delete-category-select">
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <option value="category3">Category 3</option>
+            <option value="category4">Category 4</option>
+            <option value="category5">Category 5</option>
+        </select>
+        <button id="delete-category-button">Delete Category</button>
+    </section>
+
+
+    <script src="categories.js"></script> <!-- JavaScript file for category management -->
+</body>
+</html>

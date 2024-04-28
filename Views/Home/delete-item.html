@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Item</title>
+    <a href="index.html" class="button">Back to Index</a>
+</head>
+<body>
+    <h1>Delete Items</h1>
+    <table id="inventoryTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>10</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>8</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>15</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Carrot</td>
+                <td>20</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Tomato</td>
+                <td>12</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+
+<style>
+    .button {
+        display: block;
+        width: 10%;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+    }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .delete-button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #dc3545;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+</style>
+<script>// Function to delete the row
+    function deleteRow(btn) {
+        var row = btn.parentNode.parentNode;
+        var itemName = row.cells[0].innerText;
+        var confirmDelete = confirm("Are you sure you want to delete the item '" + itemName + "'?");
+        if (confirmDelete) {
+            row.parentNode.removeChild(row);
+            alert("Item deleted");
+        }
+    }</script>
+</html>
